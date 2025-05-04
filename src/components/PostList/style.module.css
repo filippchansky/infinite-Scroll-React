@@ -1,0 +1,24 @@
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.postItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.postTitle {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.postDescription {
+  font-size: 20px;
+}
