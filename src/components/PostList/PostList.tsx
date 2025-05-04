@@ -35,6 +35,13 @@ const PostList: React.FC = () => {
     };
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const allPosts = data?.pages.flatMap((page) => page?.posts) || [];
 
   if (isLoading) return <div>Loading...</div>;
@@ -58,7 +65,7 @@ const PostList: React.FC = () => {
       )}
 
       {!hasNextPage && !isLoading && (
-        <div style={{ textAlign: 'center', padding: '20px', margin: '20px 0', color: '#666' }}>
+        <div onClick={scrollToTop} className={style.sectionUp}>
           All posts loaded
         </div>
       )}
